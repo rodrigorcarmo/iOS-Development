@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Speecher" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U3X-eU-NOe">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speecher" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnM-vb-bmo">
+                                        <rect key="frame" x="139" y="17" width="97.5" height="30"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.21474343979999999" green="0.60590070299999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="bnM-vb-bmo" secondAttribute="bottom" constant="8" id="69V-DS-cm0"/>
+                                    <constraint firstItem="bnM-vb-bmo" firstAttribute="centerX" secondItem="U3X-eU-NOe" secondAttribute="centerX" id="CeJ-Cg-0qW"/>
+                                    <constraint firstAttribute="height" constant="55" id="Ctp-1i-g7N"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play &amp; Transcribe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ma1-gS-wBV">
+                                <rect key="frame" x="16" y="621" width="343" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="0n6-QQ-tSx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="22"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tWF-cp-XOx" customClass="CircleButton" customModule="Speecher" customModuleProvider="target">
+                                <rect key="frame" x="157.5" y="553" width="60" height="60"/>
+                                <color key="backgroundColor" red="0.21474343979999999" green="0.60590070299999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="F42-ER-b7j"/>
+                                    <constraint firstAttribute="width" constant="60" id="JSX-kr-Icl"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="conrnerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="playButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MrJ-vY-QDy"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Tap the button below to transcribe the audio embedded in the app." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zBx-6z-wOy">
+                                <rect key="frame" x="16" y="63" width="343" height="482"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="abv-aP-cJb">
+                                <rect key="frame" x="157.5" y="553" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="N2g-79-Zjy"/>
+                                    <constraint firstAttribute="height" constant="60" id="rfA-Iz-TXK"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ma1-gS-wBV" secondAttribute="bottom" id="5Fu-sL-DRf"/>
+                            <constraint firstItem="tWF-cp-XOx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E9u-V7-DCr"/>
+                            <constraint firstItem="tWF-cp-XOx" firstAttribute="top" secondItem="zBx-6z-wOy" secondAttribute="bottom" constant="8" id="Gew-Rp-Dfj"/>
+                            <constraint firstItem="zBx-6z-wOy" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="TLP-pO-8hn"/>
+                            <constraint firstItem="tWF-cp-XOx" firstAttribute="centerX" secondItem="abv-aP-cJb" secondAttribute="centerX" id="YYK-WQ-afd"/>
+                            <constraint firstItem="zBx-6z-wOy" firstAttribute="top" secondItem="U3X-eU-NOe" secondAttribute="bottom" constant="8" id="a55-iJ-IYf"/>
+                            <constraint firstAttribute="trailing" secondItem="U3X-eU-NOe" secondAttribute="trailing" id="beq-Ia-w8a"/>
+                            <constraint firstItem="Ma1-gS-wBV" firstAttribute="top" secondItem="tWF-cp-XOx" secondAttribute="bottom" constant="8" id="jUe-0m-mYR"/>
+                            <constraint firstItem="tWF-cp-XOx" firstAttribute="centerY" secondItem="abv-aP-cJb" secondAttribute="centerY" id="oG2-ll-G12"/>
+                            <constraint firstItem="Ma1-gS-wBV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ol0-hn-Cto"/>
+                            <constraint firstItem="Ma1-gS-wBV" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="qmH-bf-ujP"/>
+                            <constraint firstItem="U3X-eU-NOe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="sf0-PY-vFf"/>
+                            <constraint firstItem="U3X-eU-NOe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="spc-Vt-zQU"/>
+                            <constraint firstItem="zBx-6z-wOy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ugf-AQ-61K"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activitySpinner" destination="abv-aP-cJb" id="t3M-44-oSU"/>
+                        <outlet property="transcriptionTextView" destination="zBx-6z-wOy" id="mpd-CK-mzD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.23188405797103" y="138.58695652173915"/>
+        </scene>
+    </scenes>
+</document>

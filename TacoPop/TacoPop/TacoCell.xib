@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TacoCell" id="gTV-IL-0wX" customClass="TacoCell" customModule="TacoPop" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="199" height="166"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="199" height="166"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Brisket" translatesAutoresizingMaskIntoConstraints="NO" id="SzF-WN-bIp">
+                        <rect key="frame" x="0.0" y="0.0" width="199" height="139.5"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brisket Taco" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="Kgy-UZ-j3M">
+                        <rect key="frame" x="0.0" y="144.5" width="199" height="16.5"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Kgy-UZ-j3M" secondAttribute="bottom" constant="5" id="5CJ-Lc-TxP"/>
+                <constraint firstItem="SzF-WN-bIp" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="F3M-bz-Xe2"/>
+                <constraint firstItem="Kgy-UZ-j3M" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="NLx-cq-8YC"/>
+                <constraint firstItem="SzF-WN-bIp" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="YRg-D9-00I"/>
+                <constraint firstAttribute="trailing" secondItem="Kgy-UZ-j3M" secondAttribute="trailing" id="fYl-vy-dUC"/>
+                <constraint firstItem="Kgy-UZ-j3M" firstAttribute="top" secondItem="SzF-WN-bIp" secondAttribute="bottom" constant="5" id="mmw-l9-lcZ"/>
+                <constraint firstAttribute="trailing" secondItem="SzF-WN-bIp" secondAttribute="trailing" id="s08-Jv-i2l"/>
+            </constraints>
+            <size key="customSize" width="199" height="166"/>
+            <connections>
+                <outlet property="tacoImage" destination="SzF-WN-bIp" id="W1C-SH-zG1"/>
+                <outlet property="tacoLabel" destination="Kgy-UZ-j3M" id="RIB-lQ-zep"/>
+            </connections>
+            <point key="canvasLocation" x="-60" y="16"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Brisket" width="1024" height="678"/>
+    </resources>
+</document>
